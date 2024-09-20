@@ -48,12 +48,6 @@ function App() {
           {/* add the value of the current total */} 
           {result}
         </p> 
-        {/* <input
-          pattern="[0-9]" 
-          ref={inputRef} 
-          type="number" 
-          placeholder="Type a number" 
-        />  */}
         <input
           pattern="[0-9]" 
           ref={inputRef} 
