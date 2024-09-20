@@ -42,6 +42,7 @@ function App() {
       <form> 
         <p ref={resultRef}> 
           {/* add the value of the current total */} 
+          {result}
         </p> 
         <input
           pattern="[0-9]" 
@@ -49,12 +50,17 @@ function App() {
           type="number" 
           placeholder="Type a number" 
         /> 
-        <button onClick={plus}>add</button> 
+        <button onClick={plus}>add</button>
         {/* Add the subtract button */} 
+        <button onClick={minus}>subtract</button> 
         {/* Add the multiply button */} 
+        <button onClick={times}>multiply</button>
         {/* Add the divide button */} 
+        <button onClick={divide}>divide</button>
         {/* Add the resetInput button */} 
+        <button onClick={resetInput}>reset input</button>
         {/* Add the resetResult button */} 
+        <button onClick={resetResult}>reset result</button>
       </form> 
     </div> 
   ); 

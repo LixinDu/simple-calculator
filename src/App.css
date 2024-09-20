@@ -1,6 +1,11 @@
 * {
   font-family: sans-serif;
 }
+
+.App {
+  margin:5vh 0 0 5vw;
+}
+
 input,
 button {
   font-size: 20px;
