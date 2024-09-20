@@ -15,15 +15,19 @@ function App() {
   }; 
  
   function minus(e) { 
-  	// Add the code for the minus function 
+  	e.preventDefault(); 
+    setResult((result) => result - Number(inputRef.current.value)); 
   };
  
   function times(e) { 
-    // Add the code for the plus function 
+    e.preventDefault(); 
+    setResult((result) => result * Number(inputRef.current.value)); 
   }; 
  
   function divide(e) { 
-    // Add the code for the divide function 
+    e.preventDefault(); 
+    setResult((result) => result / Number(inputRef.current.value)); 
+  
   };
  
   function resetInput(e) { 
@@ -31,7 +35,7 @@ function App() {
   }; 
  
   function resetResult(e) { 
-  	// Add the code for the resetResult function 
+  	setResult(0);
   }; 
  
   return ( 
@@ -44,6 +48,12 @@ function App() {
           {/* add the value of the current total */} 
           {result}
         </p> 
+        {/* <input
+          pattern="[0-9]" 
+          ref={inputRef} 
+          type="number" 
+          placeholder="Type a number" 
+        />  */}
         <input
           pattern="[0-9]" 
           ref={inputRef} 
