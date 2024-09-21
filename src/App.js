@@ -8,6 +8,7 @@ function App() {
   const inputRef = useRef(null); 
   const resultRef = useRef(null); 
   const [result, setResult] = useState(0); 
+  const [placeholder, setPlaceholder] = useState('Type a number');
  
   function plus(e) { 
     e.preventDefault(); 
@@ -15,16 +16,19 @@ function App() {
   }; 
  
   function minus(e) { 
+    // Add the code for the minus function 
   	e.preventDefault(); 
     setResult((result) => result - Number(inputRef.current.value)); 
   };
  
   function times(e) { 
+    // Add the code for the times function 
     e.preventDefault(); 
     setResult((result) => result * Number(inputRef.current.value)); 
   }; 
  
   function divide(e) { 
+    // Add the code for the divide function 
     e.preventDefault(); 
     setResult((result) => result / Number(inputRef.current.value)); 
   
@@ -32,9 +36,11 @@ function App() {
  
   function resetInput(e) { 
     // Add the code for the resetInput function 
+    setPlaceholder('Type a number')
   }; 
  
   function resetResult(e) { 
+    // Add the code for the resetResult function 
   	setResult(0);
   }; 
  
@@ -52,7 +58,7 @@ function App() {
           pattern="[0-9]" 
           ref={inputRef} 
           type="number" 
-          placeholder="Type a number" 
+          placeholder={placeholder}
         /> 
         <button onClick={plus}>add</button>
         {/* Add the subtract button */} 
